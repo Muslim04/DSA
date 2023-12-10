@@ -43,8 +43,30 @@ public:
     }
     void pop_back(){
 
+        if(size > 0){
+
+            --size;
+        }
         
     }
+
+    int back(){
+
+        if(size > 0){
+
+            return data[size-1];
+
+        }else{
+
+            return -1;
+        }
+    }
+int getSize(){
+
+    return size;
+}
+
+
 
     
 };
@@ -67,8 +89,14 @@ int main(){
 
    // cout << v1.data[0];
    
+    cout << v1.back() << "\n";
 
+    cout << v1.getSize() << "\n";
 
+    v1.pop_back();
+    v1.pop_back();
+    cout << v1.back() << " \n";
 
+    cout << v1.data[6];
     return 0;
 }
